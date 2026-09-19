@@ -49,7 +49,6 @@
   h1,h2,h3{ font-family:'Fraunces', serif; font-weight:500; margin:0; letter-spacing:-0.01em; }
   a:focus-visible, button:focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
 
-  /* BACKGROUND NEURAL NETWORKS (fixed, decorative, sit along the page margins) */
   .bg-network{
     position:fixed;
     top:0;
@@ -68,13 +67,11 @@
     .bg-network{ display:none; }
   }
 
-  /* Everything that should sit above the fixed background networks */
   header.nav, .hero, section, footer{
     position:relative;
     z-index:1;
   }
 
-  /* NAV */
   header.nav{
     position:fixed; top:0; left:0; right:0; z-index:50;
     background:rgba(11,14,20,0.82); backdrop-filter:blur(10px);
@@ -98,7 +95,6 @@
     .nav-links.open a{ padding:10px 0; border-bottom:1px solid var(--rule); }
   }
 
-  /* HERO */
   .hero{
     padding:168px 0 100px;
     overflow:hidden;
@@ -157,7 +153,6 @@
   .section-head h2{ font-size:clamp(28px,3.4vw,38px); margin-top:14px; }
   .section-head p{ color:var(--text-dim); margin-top:14px; font-size:15.5px; }
 
-  /* ABOUT */
   .about-grid{ display:grid; grid-template-columns: 1.3fr 1fr; gap:56px; }
   @media (max-width:800px){ .about-grid{ grid-template-columns:1fr; } }
   .about-grid p{ font-size:16.5px; color:var(--text); margin:0 0 18px; }
@@ -167,7 +162,7 @@
   .facts dt{ font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:.06em; }
   .facts dd{ margin:0; font-size:14.5px; text-align:right; max-width:60%; }
 
-  /* RESEARCH */
+  .research-list{ display:flex; flex-direction:column; gap:28px; }
   .research-card{
     background:var(--bg-elev); border:1px solid var(--rule); padding:40px;
     position:relative;
@@ -180,14 +175,13 @@
     text-transform:uppercase; letter-spacing:.08em; color:var(--cyan);
     border:1px solid var(--cyan); padding:4px 10px; margin-bottom:18px;
   }
-  .research-card h3{ font-size:26px; line-height:1.25; max-width:32ch; }
+  .research-card h3{ font-size:26px; line-height:1.25; max-width:36ch; }
   .research-authors{ margin-top:10px; font-size:14px; color:var(--text-dim); font-family:'IBM Plex Mono',monospace; }
   .research-card p.abstract{ margin-top:20px; font-size:15px; color:var(--text-dim); max-width:70ch; }
   .research-tags{ display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
   .tag{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-dim); border:1px solid var(--rule); padding:5px 10px; }
   .research-links{ margin-top:28px; display:flex; gap:14px; flex-wrap:wrap; }
 
-  /* EXPERIENCE */
   .timeline{ position:relative; padding-left:28px; border-left:1px solid var(--rule); }
   .tl-item{ position:relative; padding-bottom:44px; }
   .tl-item:last-child{ padding-bottom:0; }
@@ -202,7 +196,6 @@
   .tl-item li{ margin-bottom:8px; }
   .tl-item li::marker{ color:var(--gold); }
 
-  /* PROJECTS */
   .proj-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); }
   @media (max-width:760px){ .proj-grid{ grid-template-columns:1fr; } }
   .proj-card{ background:var(--bg); padding:32px; }
@@ -213,13 +206,11 @@
   .proj-stack span{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--cyan); }
   .proj-stack span:not(:last-child)::after{ content:'·'; color:var(--text-dimmer); margin-left:8px; }
 
-  /* SKILLS */
-  .skills-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
+  .skills-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px 28px; row-gap:36px; }
   @media (max-width:760px){ .skills-grid{ grid-template-columns:repeat(2,1fr); } }
   .skill-cat h4{ font-family:'IBM Plex Mono',monospace; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--gold); margin:0 0 12px; }
   .skill-cat p{ font-size:14px; color:var(--text-dim); margin:0; }
 
-  /* FOOTER / CONTACT */
   footer{ padding:88px 0 60px; }
   .contact-grid{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:40px; }
   footer h2{ font-size:clamp(30px,4vw,46px); max-width:16ch; }
@@ -254,11 +245,10 @@
   <div class="wrap hero-inner">
     <div class="eyebrow">Mumbai, India</div>
     <h1>Where markets<br><em>meet machines.</em></h1>
-    <p class="hero-sub">B.Tech in AI &amp; Data Science at KJ Somaiya, Somaiya Vidyavihar University. I work across econophysics and multifractal markets on one side, and applied AI/ML/DS — agentic systems, deep learning, generative models — on the other, with a growing focus on both quantitative research and AI/ML roles.</p>
+    <p class="hero-sub">B.Tech in AI &amp; Data Science at KJ Somaiya School of Engineering, Somaiya Vidyavihar University. I work across econophysics and multifractal markets on one side, and applied AI/ML/DS — agentic systems, deep learning, generative models — on the other, with a growing focus on both quantitative research and AI/ML roles.</p>
     <div class="hero-meta">
       <span>GPA <b>9.83</b></span>
       <span>Tech Head <b>Datazen, SVU</b></span>
-      <span>FRM Level I <b>Results awaited</b></span>
     </div>
     <div class="hero-links">
       <a class="btn primary" href="#research">Read the research</a>
@@ -278,14 +268,13 @@
     <div>
       <div class="eyebrow">About</div>
       <h2 style="margin-top:14px; font-size:clamp(26px,3vw,34px);">Two threads: how markets behave, and how machines learn.</h2>
-      <p style="margin-top:24px;">One thread is econophysics — applying statistical mechanics to financial markets. Non-Gaussian behavior in returns is well established; what's less understood is how multifractal structure varies across sectors, asset classes, and regimes. My published research uses MF-DFA, spectral cumulant analysis, and box-counting fractal dimensions across 50 assets and 6 sectors to characterize that heterogeneity, and connects it to diffusion and chaotic dynamics.</p>
-      <p style="margin:0 0 18px;">The other is applied AI/ML — agentic pipelines with LangGraph, deep learning across NLP, computer vision, and audio, and generative models (GANs, diffusion). I've built these in production internships and research settings, from schema-inference agents on Databricks to deepfake detection and brain tumor segmentation.</p>
+      <p style="margin-top:24px;">One thread is econophysics — applying statistical mechanics to financial markets, financial systems, and risk modelling. Non-Gaussian behavior in returns is well established; what's less understood is how multifractal structure varies across sectors, asset classes, and regimes. My published research uses MF-DFA, spectral cumulant analysis, and box-counting fractal dimensions across 50 assets and 6 sectors to characterize that heterogeneity, and connects it to diffusion and chaotic dynamics.</p>
+      <p style="margin:0 0 18px;">The other is applied AI/ML — agentic pipelines with LangGraph, RAG and LLM integration, deep learning across NLP, computer vision, and audio, and generative models (GANs, diffusion). I've built these in production internships and research settings, from schema-inference agents on Databricks to skeleton-based gesture recognition, deepfake detection, and brain tumor segmentation.</p>
       <p class="dim">The two increasingly intersect — I'm exploring how multifractal market statistics could inform the generative models used to simulate markets — and I'm actively pursuing roles and graduate programs across both quantitative research and AI/ML.</p>
     </div>
     <div class="facts">
       <dl><dt>Degree</dt><dd>B.Tech, AI &amp; Data Science — KJ Somaiya School of Engineering, SVU (2023–Present)</dd></dl>
       <dl><dt>GPA</dt><dd>9.83</dd></dl>
-      <dl><dt>Certification</dt><dd>FRM Level I — appeared, results awaited</dd></dl>
       <dl><dt>Leadership</dt><dd>Tech Head, Datazen — SVU's tech council; led a team of 5</dd></dl>
       <dl><dt>Focus</dt><dd>Econophysics &amp; quant research · Applied AI/ML &amp; generative modeling</dd></dl>
     </div>
@@ -295,22 +284,39 @@
 <section id="research">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Publication</div>
+      <div class="eyebrow">Publications</div>
       <h2>Research spotlight</h2>
     </div>
-    <div class="research-card">
-      <span class="research-status">Under review</span>
-      <h3>Multifractal Scaling in Cross-Sectoral Financial Markets: Connections with Diffusion and Chaos</h3>
-      <div class="research-authors">V. Shetty, A. Dalvi, I. N. A. Siddavatam, S. R. Jain — 2026</div>
-      <p class="abstract">Applies MF-DFA across 50 assets and 6 sectors alongside a Spectral Cumulant Index, symmetric fluctuation analysis, and box-counting fractal dimensions to characterize how multifractal structure varies across the market — connecting the results to diffusion processes and chaotic dynamics.</p>
-      <div class="research-tags">
-        <span class="tag">MF-DFA</span>
-        <span class="tag">Spectral Cumulant Index</span>
-        <span class="tag">Fractal Dimension</span>
-        <span class="tag">Econophysics</span>
+    <div class="research-list">
+      <div class="research-card">
+        <span class="research-status">Under review</span>
+        <h3>Multifractal Scaling in Cross-Sectoral Financial Markets: Connections with Diffusion and Chaos</h3>
+        <div class="research-authors">V. Shetty, A. Dalvi, I. N. A. Siddavatam, S. R. Jain — 2026</div>
+        <p class="abstract">Applies MF-DFA across 50 assets and 6 sectors alongside a Spectral Cumulant Index, symmetric fluctuation analysis, and box-counting fractal dimensions to characterize how multifractal structure varies across the market — connecting the results to diffusion processes and chaotic dynamics.</p>
+        <div class="research-tags">
+          <span class="tag">MF-DFA</span>
+          <span class="tag">Spectral Cumulant Index</span>
+          <span class="tag">Fractal Dimension</span>
+          <span class="tag">Econophysics</span>
+        </div>
+        <div class="research-links">
+          <a class="btn primary" href="https://doi.org/10.5281/zenodo.22804919" target="_blank" rel="noopener">Preprint · DOI 10.5281/zenodo.22804919</a>
+        </div>
       </div>
-      <div class="research-links">
-        <a class="btn primary" href="https://zenodo.org/records/21603704" target="_blank" rel="noopener">Preprint · DOI 10.5281/zenodo.21603704</a>
+      <div class="research-card">
+        <span class="research-status">Under review</span>
+        <h3>Kathak Mudra Recognition Using Skeleton-Based Temporal Convolutional Networks</h3>
+        <div class="research-authors">V. Lakshman, Y. Gokullgandhi, V. Shetty, A. Dalvi, I. N. A. Siddavatam, S. P. Deshmane — 2026</div>
+        <p class="abstract">A skeleton-based pipeline recognizing 26 Kathak mudra classes from pose landmarks across 538 annotated video clips, benchmarking Temporal Convolutional Network and BiLSTM classifiers on validation accuracy, macro-F1, and inference latency to select the more efficient architecture.</p>
+        <div class="research-tags">
+          <span class="tag">Pose Estimation</span>
+          <span class="tag">TCN</span>
+          <span class="tag">BiLSTM</span>
+          <span class="tag">Gesture Recognition</span>
+        </div>
+        <div class="research-links">
+          <a class="btn primary" href="https://doi.org/10.5281/zenodo.22827465" target="_blank" rel="noopener">Preprint · DOI 10.5281/zenodo.22827465</a>
+        </div>
       </div>
     </div>
   </div>
@@ -324,31 +330,42 @@
     </div>
     <div class="timeline">
       <div class="tl-item">
+        <div class="tl-date">2026</div>
+        <h3>AI &amp; DS Intern</h3>
+        <div class="org">Euclid, KJSSE</div>
+        <ul>
+          <li>Built an end-to-end skeleton-based pipeline recognizing 26 Kathak mudra classes from pose landmarks across 538 annotated video clips.</li>
+          <li>Benchmarked TCN and BiLSTM classifiers on validation accuracy, macro-F1, and inference latency to select the more efficient architecture.</li>
+          <li>Contributed to methodology, data curation, and writing for a co-authored research paper.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
         <div class="tl-date">2025</div>
         <h3>Data Scientist Intern</h3>
         <div class="org">Shyena Tech Yarns Pvt Ltd — Pune</div>
         <ul>
           <li>Built a modular agentic pipeline with LangGraph and a Groq-hosted LLM for schema inference, validation, remediation, and enhancement on Databricks.</li>
           <li>Built LLM-driven diagnostic agents combining regex-based log analyzers with LLM error classification.</li>
-          <li>Engineered prompt-driven workflows across CSV, Excel, JSON, and Parquet with reusable audit trails.</li>
-          <li>Designed fault-tolerant, idempotent agent workflows for safe re-execution and real-time validation.</li>
+          <li>Engineered fault-tolerant, idempotent workflows across CSV, Excel, JSON, and Parquet with reusable audit trails for safe re-execution.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-date">2024 – 2025</div>
         <h3>NLP Intern</h3>
-        <div class="org">Shyena Tech Yarns Pvt Ltd</div>
+        <div class="org">Independent Research Team, Bhashini Initiative</div>
         <ul>
-          <li>Scored and researched multiple translation models on NMT tasks — IndicTrans2, Google Translate, a custom Llama variant, and NLLB.</li>
-          <li>Evaluated models using BLEU, ROUGE, and additional metrics for comprehensive performance analysis.</li>
+          <li>Benchmarked machine translation models — IndicTrans2, Google Translate, a custom Llama variant, and NLLB — for a submission to Bhashini, India's national NMT initiative.</li>
+          <li>Evaluated model outputs using BLEU, ROUGE, and supplementary metrics to systematically compare translation quality across Indic languages.</li>
+          <li>Analyzed model behaviour and failure patterns to inform architecture and fine-tuning decisions ahead of submission.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-date">2024 – 2025</div>
-        <h3>ML / NLP Intern</h3>
+        <h3>AI Cyber Labs Researcher</h3>
         <div class="org">DeepCytes</div>
         <ul>
-          <li>Built a legal retrieval-based Q&amp;A interface using MiniLM L6 V2 embeddings and KeyBERT, deployed via Streamlit/Gradio.</li>
+          <li>Built a legal retrieval-based Q&amp;A interface using MiniLM L6 V2 embeddings and KeyBERT, deployed via Streamlit/Gradio — an AI-first product prototype from retrieval design through user-facing delivery.</li>
+          <li>Extracted audio features and created a custom dataset to enhance training diversity.</li>
           <li>Trained a 29k-parameter LSTM model reaching 99.06% accuracy in 104 seconds.</li>
           <li>Improved a deepfake detection model by replacing GRUs with LSTM and adding dense tanh layers.</li>
         </ul>
@@ -356,7 +373,7 @@
       <div class="tl-item">
         <div class="tl-date">2023 – 2024</div>
         <h3>Student Intern</h3>
-        <div class="org">KJ Somaiya College of Engineering, Mumbai</div>
+        <div class="org">KJ Somaiya School of Engineering</div>
         <ul>
           <li>Worked on image inpainting using GANs and UNet for restoration tasks.</li>
           <li>Conducted brain tumor segmentation research using U-Net, achieving a 63.57% Dice coefficient on the test set.</li>
@@ -371,41 +388,47 @@
     <div class="section-head">
       <div class="eyebrow">Selected work</div>
       <h2>Projects</h2>
-      <p>Mostly quant systems and applied ML — the rest span computer vision, IoT, and NLP.</p>
+      <p>Mostly quant systems and applied ML — the rest span retrieval, IoT, and NLP.</p>
     </div>
     <div class="proj-grid">
       <div class="proj-card">
         <div class="idx">01</div>
+        <h3>Interpretable RAG — KL Divergence &amp; EVT for Confidence Calibration</h3>
+        <p>Built a BM25 + LLM-reranker RAG pipeline (LangChain/Ollama) with a statistical layer flagging trustworthy retrievals via KL divergence and EVT; improved Recall@1 to 0.815, with EVT-flagged retrievals 89% accurate vs. 76% unflagged.</p>
+        <div class="proj-stack"><span>LangChain</span><span>Ollama</span><span>BM25</span></div>
+      </div>
+      <div class="proj-card">
+        <div class="idx">02</div>
         <h3>Sentiment-Driven Trading System</h3>
         <p>Combined 20 technical indicators with FinBERT-based sentiment on Reddit data to model equity price movement; a Q-learning hedging agent with leakage-safe temporal train/test splitting.</p>
         <div class="proj-stack"><span>FinBERT</span><span>Q-learning</span><span>Streamlit</span></div>
       </div>
       <div class="proj-card">
-        <div class="idx">02</div>
+        <div class="idx">03</div>
         <h3>Greeks Radar — Options Risk &amp; Mispricing Monitor</h3>
         <p>Real-time options risk dashboard computing Black-Scholes Greeks on live option chains; a heap for top-K gamma-exposure ranking and a Random Forest IV-surface fit to flag mispriced contracts.</p>
         <div class="proj-stack"><span>yfinance</span><span>Random Forest</span><span>SQL</span></div>
       </div>
       <div class="proj-card">
-        <div class="idx">03</div>
+        <div class="idx">04</div>
         <h3>Evolutionary LSSVM Trading System</h3>
         <p>Least-Squares SVM implemented from its kernel formulation (linear, RBF, sigmoid, mixed) with class-weighted regularization; a genetic algorithm jointly evolves feature subsets and hyperparameters.</p>
         <div class="proj-stack"><span>LSSVM</span><span>Genetic Algorithm</span><span>SMOTE</span></div>
       </div>
       <div class="proj-card">
-        <div class="idx">04</div>
+        <div class="idx">05</div>
         <h3>Smart Traffic Management System</h3>
         <p>IoT and YOLOv4 for real-time vehicle detection and congestion scoring, with automated traffic lights synced via Python-Arduino.</p>
         <div class="proj-stack"><span>YOLOv4</span><span>IoT</span><span>Arduino</span></div>
       </div>
       <div class="proj-card">
-        <div class="idx">05</div>
-        <h3>Kathak Mudra Detection System</h3>
-        <p>Real-time gesture recognition with Mediapipe, OpenCV, and LSTM, processing 20+ GB of data for sequential classification.</p>
-        <div class="proj-stack"><span>Mediapipe</span><span>OpenCV</span><span>LSTM</span></div>
+        <div class="idx">06</div>
+        <h3>Web Scraping and Data Collection</h3>
+        <p>Built Selenium-based scrapers to automate data extraction from sites like Mouthshut and Naukri, collecting 100,000+ entries for downstream analysis.</p>
+        <div class="proj-stack"><span>Selenium</span><span>Python</span></div>
       </div>
       <div class="proj-card">
-        <div class="idx">06</div>
+        <div class="idx">07</div>
         <h3>Resume Scorer</h3>
         <p>Word2Vec-based system using cosine and bigram similarity to semantically rank 500+ resumes — later evolved into a semantic scorer used for Datazen's Datathon 2025.</p>
         <div class="proj-stack"><span>Word2Vec</span><span>NLP</span></div>
@@ -422,12 +445,20 @@
     </div>
     <div class="skills-grid">
       <div class="skill-cat">
-        <h4>AI / ML</h4>
-        <p>LLMs, Agentic Pipelines (LangGraph), GANs, UNet, LSTM, NLP, Computer Vision</p>
+        <h4>Generative AI &amp; Agents</h4>
+        <p>LLM Integration, Agentic Pipelines (LangGraph), RAG, Model Evaluation</p>
+      </div>
+      <div class="skill-cat">
+        <h4>ML &amp; DL</h4>
+        <p>GANs, UNet, LSTM, NLP, Computer Vision</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Domain</h4>
+        <p>Financial Systems, Quantitative Finance, Risk Modelling, Econophysics</p>
       </div>
       <div class="skill-cat">
         <h4>Languages</h4>
-        <p>Python, JavaScript, SQL</p>
+        <p>Python, SQL, Java, C++, JavaScript</p>
       </div>
       <div class="skill-cat">
         <h4>Frameworks / Tools</h4>
@@ -468,7 +499,6 @@
 </footer>
 
 <script>
-  // mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   navToggle.addEventListener('click', () => {
@@ -480,7 +510,6 @@
     navToggle.setAttribute('aria-expanded', 'false');
   }));
 
-  // NOTE: replace these with your real links, then remove this script block's data-fill wiring
   const REAL_LINKS = {
     email: 'mailto:vedantshetty42@gmail.com',
     linkedin: 'https://www.linkedin.com/in/vedant-shetty-315853287',
@@ -499,9 +528,6 @@
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Hero signature visual: an animated Weierstrass function —
-  // the classical example of a fractal, everywhere-continuous but nowhere-differentiable
-  // curve. Stands in for the "market roughness" theme of the research above.
   const canvas = document.getElementById('fractal-canvas');
   const ctx = canvas.getContext('2d');
   let w, h, dpr;
@@ -517,9 +543,8 @@
   resize();
   window.addEventListener('resize', resize);
 
-  // Weierstrass: W(x) = sum a^k * cos(b^k * pi * x + phase)
   const a = 0.6, b = 3.2, terms = 7;
-  const wNorm = (1 - Math.pow(a, terms)) / (1 - a); // max possible |sum|, used to normalize to [-1, 1]
+  const wNorm = (1 - Math.pow(a, terms)) / (1 - a);
 
   function weierstrass(x, phase) {
     let sum = 0;
@@ -565,9 +590,6 @@
     animate();
   }
 
-  // Background neural-network decorations: two tall, narrow networks that sit
-  // fixed along the left and right margins of the whole page (not just the hero),
-  // pulses flowing top-to-bottom, standing in for the AI/ML thread throughout.
   function initBgNetwork(canvas, layerCounts, colorPulse, colorNode, colorEdge, spawnRate) {
     if (!canvas) return;
     const c = canvas.getContext('2d');
